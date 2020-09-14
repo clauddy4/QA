@@ -1,5 +1,3 @@
-package test;
-
 import java.io.*;
 import java.util.Scanner;
 
@@ -23,6 +21,7 @@ public class Test {
                     out.write("success\n");
                 } else {
                     out.write("error\n");
+                    out.write("java -jar " + args[1] + " " + numbers + "\n");
                 }
             }
         }

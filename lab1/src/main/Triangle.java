@@ -1,5 +1,3 @@
-package main;
-
 class Triangle {
     private double a;
     private double b;

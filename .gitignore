@@ -2,6 +2,7 @@
 *.txt
 
 # User-specific stuff
+META-INF
 .idea
 .idea/**/workspace.xml
 .idea/**/tasks.xml
