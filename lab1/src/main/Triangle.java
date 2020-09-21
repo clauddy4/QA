@@ -31,17 +31,6 @@ class Triangle {
         this.c = c;
     }
 
-    double getPerimeter() {
-        perimeter = a + b + c;
-        return perimeter;
-    }
-
-    double getArea() {
-        getPerimeter();
-        double halfPerimeter = perimeter / 2;
-        return Math.sqrt(halfPerimeter * (halfPerimeter - a) * (halfPerimeter - b) * (halfPerimeter - c));
-    }
-
     void setTypeTriangle(ETypeTriangle typeTriangle) {
         this.typeTriangle = typeTriangle;
     }

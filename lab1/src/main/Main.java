@@ -35,7 +35,5 @@ public class Main {
         } else if (triangle.getTypeTriangle().equals(ETypeTriangle.NORMAL)) {
             System.out.println("normal");
         }
-        System.out.println("Периметр треугольника: " + triangle.getPerimeter());
-        System.out.println("Площадь треугольника: " + triangle.getArea());
     }
 }

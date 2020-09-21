@@ -1,6 +1,6 @@
 public enum ETypeTriangle {
     NORMAL,
-    ISOSCELES,
-    EQUILATERAL,
+    ISOSCELES, //равнобедренный
+    EQUILATERAL, //равносторонний
     NOTRIANGLE
 }
