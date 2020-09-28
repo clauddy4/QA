@@ -28,15 +28,16 @@ public class Main {
     }
 
     private static void getContentPage(String url) throws IOException {
+        FileWriter br = new FileWriter("broken.txt");
+
         StringBuilder sb = new StringBuilder();
         HttpURLConnection http = (HttpURLConnection) new URL(url).openConnection();
         int statusCode = http.getResponseCode();
 
         if (statusCode > 301) {
             broken++;
-
+            br.write(url + " " + statusCode + "\n");
             System.err.printf("%s %d%n", url, statusCode);
-            return;
         }
 
         try {
@@ -52,14 +53,17 @@ public class Main {
 
             unbroken++;
 
-//            System.out.printf("%s %d%n", url, statusCode);
+            System.out.printf("%s %d%n", url, statusCode);
 
             getLinks(sb.toString());
         } catch (Exception e) {
             broken++;
 
-//            System.err.printf("%s %d%n", url, statusCode);
+            System.err.printf("%s %d%n", url, statusCode);
         }
+
+        System.out.println("before close");
+        br.close();
     }
 
     private static void getLinks(String content) throws IOException {
